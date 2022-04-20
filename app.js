@@ -10,6 +10,9 @@ const WeatherRouter = require('./routes/weather');
 // Create Express App
 const app = express();
 
+// Set static folder
+app.use(express.static('public'));
+
 // Rate Limiting
 const limiter = rateLimit({
   windowMs: 10 * 60 * 1000, // 10 minitus
